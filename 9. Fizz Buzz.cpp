@@ -34,4 +34,12 @@ public:
 	}
 	return vstr;
     }
+                  /*ANOTHER WAY*/
+ //    vector<string> fizzBuzz(int n) {
+ //        vector<string> vstr;
+	// 	for (int i = 1; i < n + 1; i++){
+	// 	    i % 15 ? (i % 3 ? (i % 5 ? vstr.push_back(to_string(i)) : vstr.push_back("buzz")) : vstr.push_back("fizz")) : vstr.push_back("fizz buzz");
+	//     }
+	// return vstr;
+ //    }
 };
