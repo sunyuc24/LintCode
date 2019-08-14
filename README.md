@@ -1,12 +1,15 @@
 # LintCode
-Report my LintCode problem's solution.¡¢
+Report my LintCode problem's solution.
+
 #########Update 2019.8.9###########
+
 6.Merge Two Sorted Array
 Merge two given sorted ascending integer array A and B into a new sorted integer array.
 Example:
 
 Input:  A=[1,2,3,4], B=[2,4,5,6]
-Output: [1,2,2,3,4,4,5,6]	
+Output: [1,2,2,3,4,4,5,6]
+	
 Explanation: return array merged.
 This problem can solved with Binary search algorithm.
 Binary search is a fast search algorithm with run-time complexity of ¦¯(log n). 
