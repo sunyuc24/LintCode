@@ -85,5 +85,36 @@ void nQueens(int N){
 			}
 		}
 	}
+	if (!nSolu)
+		cout << "no solution";
+}
+
+bool helper(stack<queen>& solu, queen q, int& N){
+	if (N <= solu.size()){  //找到全局解
+		printSolu(N, solu);
+		return false;
+	}
+
+	while (q.y < N && !canPlace(q, solu)){ //试探下一列
+		q.y++;
+	}
+	if (q.y < N){ //找到了可以放置的下一列
+		queen temp(q.x + 1, 0);    //进入下一行, 从第0列开始
+		while (q.y < N){
+			solu.push(q); //入栈
+			if (helper(solu, temp, N)){
+				return true;
+			}
+			else{
+				solu.pop();
+				do{ //试探下一列
+					q.y++;
+				} while (q.y < N && !canPlace(q, solu));
+			}
+		}
+		
+	}
+	//回溯
+	return false;
 }
  #endif
